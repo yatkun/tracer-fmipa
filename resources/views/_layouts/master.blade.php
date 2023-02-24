@@ -13,7 +13,7 @@
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
     @vite('resources/css/app.css')
-    <script src="//unpkg.com/alpinejs" defer></script>
+    @vite('resources/js/alpine.min.js')
 
     {{-- <script src="//unpkg.com/alpinejs" defer></script> --}}
     <title>{{ $title }} | TracerStudy FMIPA</title>
