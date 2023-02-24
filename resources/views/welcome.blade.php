@@ -25,7 +25,7 @@
     <section class="bg-primary">
         <div class="nav container mx-auto flex items-center justify-between h-20">
             <div class="flex items-center gap-4">
-                <div class="flex-shrink-0 w-72"><a href="/"><img src="/images/logots.png" alt=""></a></div>
+                <div class="flex-shrink-0 w-72"><a href="/"><img src="{{ Vite::asset('/images/logots.png') }}" alt=""></a></div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4 text-base text-secondary ">
                         {{-- <a href="" class="menu active transition duration-150">Home</a>
