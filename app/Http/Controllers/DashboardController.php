@@ -26,7 +26,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-   
 
         $pengumuman = Pengumuman::all()->last();
         $user = User::where('role', 'alumni')->count();
