@@ -70,7 +70,7 @@
               
             </div>
             <div class=" md:w-1/2 w-full">
-                <img src="/images/hero.png" alt="" class="w-4/5 sm:w-full block mx-auto">
+                <img src="./images/hero.png" alt="" class="w-4/5 sm:w-full block mx-auto">
             </div>
 
         </div>
