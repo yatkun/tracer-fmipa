@@ -34,7 +34,7 @@
         <div class="grid grid-cols-12 gap-5">
             <div class="md:col-span-3 col-span-12">
                 <div class="flex flex-col">
-                    <img src="{{ asset('/images/foto/'.auth()->user()->foto) }}"
+                    <img src="{{ asset('/images/foto/'.$user->foto) }}"
                         class="rounded-full w-40 h-40 mx-auto object-cover">
                     {{-- <div class="text-center mt-5">
                         <a href="" class="btn-primary text-center">Ganti foto</a>
