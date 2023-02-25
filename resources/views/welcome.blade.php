@@ -36,7 +36,7 @@
             </div>
 
             
-            <a href="/masuk" class="btn-primary">Masuk</a>
+            <a href="/masuk" class="btn-primary hidden sm:block">Masuk</a>
         </div>
     </section>
 
