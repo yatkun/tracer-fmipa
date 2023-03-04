@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\TraceradminController;
+use App\Http\Controllers\PenggunalulusanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +69,7 @@ Route::delete('data-tracer/hapus/{kuesioner}', [TraceradminController::class, 'd
 // Pengumuman
 Route::get('pengumuman', [PengumumanController::class, 'index'])->middleware(['auth', 'checkRole:admin']);
 Route::post('pengumuman', [PengumumanController::class, 'store'])->name('pengumuman.store')->middleware(['auth', 'checkRole:admin']);
+
+// Pengguna Lulusan
+Route::get('pengguna-lulusan', [PenggunalulusanController::class, 'index']);
+Route::post('store', [PenggunalulusanController::class, 'store'])->name('pengguna-lulusan.simpan');

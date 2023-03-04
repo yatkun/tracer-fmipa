@@ -59,8 +59,8 @@
                         
                     </div>
                     <div class="flex items-center gap-3 mx-auto md:mx-0">
-                        <a href="#" class="btn-red md:flex block text-center">Kuisioner Pengguna Lulusan</a>
-                        <a href="#" class="btn-red md:flex block text-center">Kuisioner Mitra Kerjasama</a>
+                        <a href="/pengguna-lulusan" class="btn-red md:flex block text-center">Kuisioner Pengguna Lulusan</a>
+                        
                     
                         
                     </div>
