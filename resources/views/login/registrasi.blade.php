@@ -25,7 +25,7 @@
                         Halaman Daftar
                     </h1>
 
-                    <form class="space-y-3" action="{{ route('user.simpan') }}" method="POST">
+                    <form class="space-y-3" action="{{ url('store-user') }}" method="POST">
                         @csrf
                         <div>
                             <label for="username" class=" mb-2 text-sm font-medium text-gray-900 flex items-center">Nama

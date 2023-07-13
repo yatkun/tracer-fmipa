@@ -37,10 +37,10 @@ Route::get('/profile', function () {
 
 
 
-Route::get('masuk', [LoginController::class, 'index'])->name('masuk')->middleware('guest');
-Route::get('daftar', [LoginController::class, 'daftar'])->middleware('guest');
-Route::post('store', [LoginController::class, 'store'])->name('user.simpan');
-Route::post('masuk', [LoginController::class, 'authenticate'])->name('proses.login');
+Route::get('/masuk', [LoginController::class, 'index'])->name('masuk')->middleware('guest');
+Route::get('/daftar', [LoginController::class, 'daftar'])->middleware('guest');
+Route::post('/store-user', [LoginController::class, 'store'])->name('user.simpan');
+Route::post('/masuk', [LoginController::class, 'authenticate'])->name('proses.login');
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
