@@ -19,7 +19,7 @@
                         <label for="kodept" class="block text-sm font-medium text-gray-700">Kode PT</label>
                         <input type="text" id="kodept" name="kodept"
                             class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                            value="001054">
+                            value="001054" disabled>
                             @error('kodept')
                         <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
 
