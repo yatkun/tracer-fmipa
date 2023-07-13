@@ -16,10 +16,10 @@
                 <div class="grid grid-cols-6 gap-4 md:gap-6">
                
                     <div class="col-span-6 sm:col-span-2">
-                        <label for="kodept" class="block text-sm font-medium text-gray-700">Kode PT</label>
+                        <label for="kodept" class="block text-sm font-medium text-gray-700">Kode Perguruan Tinggi</label>
                         <input type="text" id="kodept" name="kodept"
                             class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                            value="001054" disabled>
+                            value="001054">
                             @error('kodept')
                         <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
 
@@ -44,7 +44,7 @@
                         <label for="namalengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
                         <input type="text" id="namalengkap" name="namalengkap"
                             class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                            value="{{ auth()->user()->namalengkap }}" disabled>
+                            value="{{ auth()->user()->namalengkap }}" {{ auth()->user()->namalengkap ? 'readonly' : '' }}>
                             @error('namalengkap')
                             <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
     
@@ -55,7 +55,7 @@
                         <label for="tahunlulus" class="block text-sm font-medium text-gray-700">Tahun Lulus</label>
                         <input type="text" id="tahunlulus" name="tahunlulus"
                             class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                            value="{{ auth()->user()->tahunlulus }}" disabled>
+                            value="{{ auth()->user()->tahunlulus }}" {{ auth()->user()->tahunlulus ? 'readonly' : '' }}>
                             @error('tahunlulus')
                             <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
     
