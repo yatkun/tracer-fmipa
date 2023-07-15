@@ -213,28 +213,17 @@
                         bekerja?</label>
                 </div>
                 <div class="col-span-6 sm:col-span-3 border-b sm:border-b-0 pb-4 sm:pb-2">
-                    <div class="flex items-center mb-1">
-                        <input id="p3a" type="radio" name="p3"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
-                            value="1" {{ $user->p3==1 ? 'checked' : '' }}>
-                        <label for="p3a" class="ml-2 text-sm font-normal text-gray-700 ">Provinsi</label>
-                    </div>
-                    <div class="flex items-center mb-1">
-                        <input id="p3b" type="radio" name="p3"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2"
-                            value="2" {{ $user->p3==2 ? 'checked' : '' }}>
-                        <label for="p3b" class="ml-2 text-sm font-normal text-gray-700 ">Kab/Kota</label>
-                    </div>
-                    <div class="flex items-center mb-1">
-                        <input id="p3c" type="radio" name="p3"
-                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  focus:ring-2"
-                            value="3" {{ $user->p3==3 ? 'checked' : '' }}>
-                        <label for="p3c" class="ml-2 text-sm font-normal text-gray-700 ">Belum bekerja</label>
-                    </div>
-                    @error('p3')
-                    <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                    <input type="text" id="p3a" name="p3a" value="{{ $user->p3a }}" placeholder="Masukkan provinsi (Contoh : Sulawesi Barat)"
+                            class="text-sm block w-full  p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 ">
 
-                    @enderror
+                            <input type="text" id="p3b" name="p3b" value="{{ $user->p3b }}" placeholder="Masukkan kabupaten/kota (Contoh : Majene)"
+                            class="mt-3 text-sm block w-full  p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 ">
+                            @error('p3a')
+                            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                            @enderror
+                            @error('p3b')
+                            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                            @enderror
 
                 </div>
             </div>
