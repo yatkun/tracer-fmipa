@@ -39,7 +39,8 @@
  
     const p1 = document.getElementById("p1a");
     const p2 = document.getElementById("p2a");
-    const p3 = document.getElementById("p3a");
+    const p3a = document.getElementById("p3a");
+    const p3b = document.getElementById("p3b");
     const p4 = document.getElementById("p4a");
     const p5 = document.getElementById("p5");
     const p6 = document.getElementById("p6a");
@@ -68,7 +69,8 @@
 
             p2.required = true;
             p2e.required = true;
-            p3.required = true;
+            p3a.required = true;
+            p3b.required = true;
             p4.required = true;
             p5.required = true;
             p7.required = true;
@@ -96,7 +98,8 @@
             $("#pertanyaan10").show();
             p2.required = true;
             p2e.required = true;
-            p3.required = true;
+            p3a.required = true;
+            p3b.required = true;
             p4.required = true;
             p6.required = true;
             p5.required = true;
@@ -132,7 +135,8 @@
             $("#pertanyaan7").hide();
             p2.required = false;
             p2e.required = false;
-            p3.required = false;
+            p3a.required = false;
+            p3b.required = false;
             p4.required = false;
             p6.required = false;
             p5.required = false;
@@ -152,7 +156,8 @@
             $("#pertanyaan10").hide();
             p2.required = false;
             p2e.required = false;
-            p3.required = false;
+            p3a.required = false;
+            p3b.required = false;
             p4.required = false;
             p6.required = false;
             p5.required = false;
@@ -164,7 +169,8 @@
             p10.required = false;
 
             p2.checked = false;
-            p3.checked = false;
+            p3a.checked = false;
+            p3b.checked = false;
             p4.checked = false;
             p6.checked = false;
             p5.checked = false;
@@ -189,7 +195,8 @@
             $("#pertanyaan10").hide();
             p2.required = false;
             p2e.required = false;
-            p3.required = false;
+            p3a.required = false;
+            p3b.required = false;
             p4.required = false;
             p6.required = false;
             p5.required = false;
@@ -201,7 +208,8 @@
             p10.required = false;
 
             p2.checked = false;
-            p3.checked = false;
+            p3a.checked = false;
+            p3b.checked = false;
             p4.checked = false;
             p6.checked = false;
             p5.checked = false;

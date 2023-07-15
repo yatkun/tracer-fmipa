@@ -29,7 +29,8 @@ return new class extends Migration
             $table->integer('p2c')->nullable();
             $table->integer('p2d')->nullable();
             $table->integer('p2e')->nullable();
-            $table->integer('p3')->nullable();
+            $table->string('p3a')->nullable();
+            $table->string('p3b')->nullable();
             $table->integer('p4')->nullable();
             $table->string('p4h')->nullable();
             $table->string('p5')->nullable();
