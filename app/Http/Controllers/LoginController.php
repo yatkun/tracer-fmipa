@@ -25,12 +25,17 @@ class LoginController extends Controller
   public function store(Request $request)
   {
     $data = $this->validate($request, [
-      'username' => 'required|min:5',
+      'username' => 'required|min:6|unique:users',
       'namalengkap' => 'required',
       'prodi' => 'required',
       'tahunlulus' => 'required',
       'password' => 'required'
-    ]);
+    ],
+    [
+      'username.unique'    => 'Nama pengguna telah digunakan !',
+     
+  ]
+);
 
     $data['password'] = bcrypt($data['password']);
     User::create($data);

@@ -87,7 +87,9 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                                 placeholder="masukkan kata sandi" required>
                         </div>
-
+                        @error('username')
+                            <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
+                            @enderror
                         <button type="submit"
                             class="w-full text-white bg-secondary hover:bg-[#ff8c1b] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
                         <p class="text-sm font-light text-gray-500 ">
