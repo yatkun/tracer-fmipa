@@ -44,7 +44,7 @@
                     <label for="namalengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
                     <input type="text" id="namalengkap" name="namalengkap"
                         class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                        value="{{ auth()->user()->namalengkap }}">
+                        value="{{ $user->namalengkap }}">
                     @error('namalengkap')
                     <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
 
@@ -55,7 +55,7 @@
                     <label for="tahunlulus" class="block text-sm font-medium text-gray-700">Tahun Lulus</label>
                     <input type="text" id="tahunlulus" name="tahunlulus"
                         class="mt-1 text-sm block w-full p-2 sm:p-2.5 text-gray-900 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 "
-                        value="{{ auth()->user()->tahunlulus }}">
+                        value="{{ $user->tahunlulus }}">
                     @error('tahunlulus')
                     <p class="mt-2 text-sm text-red-600 dark:text-red-500">{{ $message }}</p>
 
