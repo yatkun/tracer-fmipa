@@ -48,7 +48,7 @@
                             </div>
                             <input type="text" name="username" id="username"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                                placeholder="masukkan nama pengguna" required>
+                                placeholder="masukkan nama pengguna" required value="{{ old('username') }}">
                         </div>
 
                         <div>
@@ -56,7 +56,7 @@
                                 Lengkap Alumni</label>
                             <input type="text" name="namalengkap" id="namalengkap"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                                placeholder="masukkan nama lengkap" required>
+                                placeholder="masukkan nama lengkap" value="{{ old('namalengkap') }}" required>
                         </div>
 
                         <div class="flex gap-4 justify-between">
@@ -75,7 +75,7 @@
                                 <label for="tahunlulus" class="block mb-2 text-sm font-medium text-gray-900 ">Tahun Lulus</label>
                                 <input type="text" name="tahunlulus" id="tahunlulus"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                                    placeholder="contoh: 2019" required>
+                                    placeholder="contoh: 2019" value="{{ old('tahunlulus') }}" required>
                             </div>
                         </div>
 

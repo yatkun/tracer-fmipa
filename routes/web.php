@@ -46,8 +46,10 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 
 // DASHBOARD ROUTE
-Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('dashboard', [DashboardController::class, 'index'])->middleware('auth')->name('dashboard');
 Route::get('profil', [DashboardController::class, 'profil'])->name('profil.index')->middleware(['auth', 'checkRole:alumni']);
+Route::get('/ganti-password', [DashboardController::class, 'password'])->name('gantipassword.index')->middleware(['auth', 'checkRole:alumni']);
+Route::post('/ganti-password/update', [DashboardController::class, 'updatepassword'])->name('password.update')->middleware(['auth', 'checkRole:alumni']);
 Route::put('profil', [DashboardController::class, 'updateprofil'])->name('profil.update')->middleware(['auth', 'checkRole:alumni']);
 
 // Kuisioner Route

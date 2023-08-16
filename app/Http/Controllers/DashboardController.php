@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
-
+use Hash;
 
 
 
@@ -52,6 +52,43 @@ class DashboardController extends Controller
        ]);
     }
 
+    public function password()
+    {
+        $user = Auth::user();
+        // dd($user);
+        $data = User::where('id', $user->id)->first();
+        // $data = User::where('role','alumni')->get();
+        return view('password.index',
+       [
+        'user' => $data,
+        'title' => 'Ganti Password'
+       ]);
+    }
+
+    public function updatepassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|min:6|confirmed',
+        ],
+    [
+        'password.confirmed'    => 'Konfirmasi password tidak cocok.',
+        'password.min:6'    => 'Password harus terdiri dari minimal 6 karakter',
+    ]);
+
+        $user = Auth::user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return back()->with('error', 'Password saat ini tidak cocok.');
+        }
+
+        $user->update([
+            'password' => Hash::make($request->password),
+        ]);
+
+        return redirect()->route('dashboard')->with('success', 'Password berhasil diperbarui.');
+    }
+
     public function updateprofil(Request $request)
     {
 
@@ -60,7 +97,7 @@ class DashboardController extends Controller
                 'required',
                 Rule::unique('users', 'username')->ignore(Auth::user()->id)
             ],
-            'foto' => 'image|mimes:jpeg,png,jpg|max:200',
+            'foto' => 'image|mimes:jpeg,png,jpg|max:2048',
             
             
         ]);
