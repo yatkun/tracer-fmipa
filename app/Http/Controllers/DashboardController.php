@@ -86,7 +86,7 @@ class DashboardController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Password berhasil diperbarui.');
+        return back()->with('success', 'Password berhasil diperbarui.');
     }
 
     public function updateprofil(Request $request)
